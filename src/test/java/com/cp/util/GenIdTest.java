@@ -41,6 +41,14 @@ class GenIdTest {
 
     }
 
+    @DisplayName("Id positivo")
+    @org.junit.jupiter.api.Test
+    void getId() {
+        GenId geid = new GenId();
+        int randomId = geid.getIdPrimo();
+        assert randomId != 0 : "ID should not be null";
+    }
+
     private boolean isPrimo(int num) {
         for(int i = num-1; i > 1; i--) {
             if(num % i == 0) {
