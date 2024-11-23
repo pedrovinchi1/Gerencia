@@ -22,22 +22,24 @@
             <h:commandButton value="+" action="#{beanJFPessoa.add()}" />
         </h:form>
     <hr/>
-        <h2>== Lista de clientes cadastrados ==</h2>
-        <h:form>
-            <h:dataTable value="#{beanJFPessoa.all}" var="pessoa">
-                <h:column>
-                    <h:outputText value="#{pessoa.id}" />
-                </h:column>
-                <h:column>
-                    <h:outputText value="#{pessoa.nome}" />
-                </h:column>
-                <h:column>
-                    <h:outputText value="#{pessoa.cidade.nome}" />
-                </h:column>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h2>== Lista de clientes cadastrados ==</h2>
 
-            </h:dataTable>
-        </h:form>
-<h:form>
+            <h:form>
+                <h:dataTable value="#{beanJFPessoa.all}" var="pessoa" style="border: 1px solid black;">
+                    <h:column>
+                        <h:outputText value="#{pessoa.id}" style="border-bottom: 1px solid black;"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{pessoa.nome}" style="border-bottom: 1px solid black;"/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{pessoa.cidade.nome}" style="border-bottom: 1px solid black;"/>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </div>
+        <h:form>
     <br/><br/><br/>
     <h:outputLink value="#{facesContext.externalContext.requestContextPath}/rest/application.wadl">WADL</h:outputLink>
 </h:form>
