@@ -26,15 +26,15 @@
             <h2>== Lista de clientes cadastrados ==</h2>
 
             <h:form>
-                <h:dataTable value="#{beanJFPessoa.all}" var="pessoa" style="border: 1px solid black;">
+                <h:dataTable value="#{beanJFPessoa.all}" var="pessoa" style="border: 1px solid red;">
                     <h:column>
-                        <h:outputText value="#{pessoa.id}" style="border-bottom: 1px solid black;"/>
+                        <h:outputText value="#{pessoa.id}" style="border-bottom: 1px solid red;"/>
                     </h:column>
                     <h:column>
-                        <h:outputText value="#{pessoa.nome}" style="border-bottom: 1px solid black;"/>
+                        <h:outputText value="#{pessoa.nome}" style="border-bottom: 1px solid red;"/>
                     </h:column>
                     <h:column>
-                        <h:outputText value="#{pessoa.cidade.nome}" style="border-bottom: 1px solid black;"/>
+                        <h:outputText value="#{pessoa.cidade.nome}" style="border-bottom: 1px solid red;"/>
                     </h:column>
                 </h:dataTable>
             </h:form>
